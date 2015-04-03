@@ -66,45 +66,7 @@
     },
 
 
-      /*
-      a b c       c b a
-      d e f       f e d
-      g h i       i h g
-
-
-
-      */
-
-      /*
-      for loop for each diagonal
-      [n-2, 0], [n-1, 1]
-      [n-3, 0], [n-1, 1]
-
-      rc
-               30 41
-            20 31 42
-         10 21 32 43
-      00 11 22 33 44
-      01 12 23 34 
-      02 13 24
-      03 14   
-
-      [0, 0, 0, 0, 0],
-      [1, 1, 0, 0, 0],
-      [0, 0, 0, 0, 0],
-      [1, 1, 0, 0, 0],
-      [0, 0, 0, 0, 0]
-
-      (0,0) (0,1) (0,2)
-
-
-      for (var i = 0, i < n - 2; i ++){
-        array.push (grid (i, )
-
-      }
-
-      */  
-
+     
 
 
     // TODO: define methods here for majorDiags and minorDiags
@@ -164,18 +126,7 @@
     // --------------------------------------------------------------
     //
     // test if a specific row on this board contains a conflict
-    /*
     
-      sum elements
-      return sum > 1
-    =======
-    for each row
-      test if row has conflict
-      if conflict
-        return true
-    return false
-
-    */
     hasRowConflictAt: function(rowIndex) {
      var row = this.rows()[rowIndex];
      var sum =  _.reduce (row, function (a, b) {
@@ -220,22 +171,6 @@
       return false; 
     },
 
-
-    /*
-    Major Pseudocode
-
-    // for each diagonal
-    // if sum > 1 --> collision
-    // -2, -1,  0,  1,  2, 
-    // 20, 10, 00, 01, 02,
-
-       [1, 0, 0, 0],
-       [0, 0, 0, 0],
-       [1, 0, 0, 0],
-       [0, 0, 0, 0]
-
-
-    */
     // Major Diagonals - go from top-left to bottom-right
     // --------------------------------------------------------------
     //
@@ -262,22 +197,6 @@
       }
       return false; 
     },
-
-    /*
-    Minor Pseudocode
-
-    // for each diagonal
-    // if sum > 1 --> collision
-    // 10, 20, 30, 31, 32
-
-       [1, 0, 0, 0],
-       [0, 0, 0, 0],
-       [1, 0, 0, 0],
-       [0, 0, 0, 0]
-
-
-    */
-
 
     // Minor Diagonals - go from top-right to bottom-left
     // --------------------------------------------------------------

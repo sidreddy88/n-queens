@@ -17,8 +17,7 @@ window.findNRooksSolution = function(n) {
 
   var colCheck = function(r){
     
-    if(r === n){
-      
+    if(r === n){ 
       return;
     }
     for(var c = 0; c < n; c++){
@@ -65,8 +64,6 @@ window.countNRooksSolutions = function(n) {
   return solutionCount;
 };
 
-
-
 // return a matrix (an array of arrays) representing a single nxn chessboard, with n queens placed such that none of them can attack each other
 window.findNQueensSolution = function(n) {
   var board = new Board({n: n});
@@ -84,9 +81,7 @@ window.findNQueensSolution = function(n) {
 
   var colCheck = function(r){    
     if(r === n){
-      // if (numPieces() === n) {
         return;
-      // }
     }
     for(var c = 0; c < n; c++){
       board.togglePiece(r, c);
@@ -140,7 +135,6 @@ window.countNQueensSolutions = function(n) {
       }
     
     } return;
-
 
   };
   recursive(0);
